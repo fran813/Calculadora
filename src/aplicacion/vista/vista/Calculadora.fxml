@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="299.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplicacion.vista.controladorvista.CalculadoraControlador">
+   <children>
+      <VBox alignment="TOP_RIGHT" prefHeight="398.0" prefWidth="299.0" style="-fx-background-color: black; -fx-background-radius: 30;">
+         <children>
+            <Button fx:id="btnSalir" alignment="BASELINE_RIGHT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#salir" prefHeight="5.0" prefWidth="10.0" style="-fx-background-color: red; -fx-background-radius: 50;">
+               <font>
+                  <Font size="5.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <StackPane prefHeight="77.0" prefWidth="213.0">
+               <children>
+                  <TextField fx:id="tfPantalla" alignment="CENTER_RIGHT" onAction="#calculaResultado" onKeyTyped="#teclaPulsada" prefHeight="38.0" prefWidth="193.0" style="-fx-background-radius: 15;" text="0">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lbOperador" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="17.0" style="-fx-background-color: gray; -fx-background-radius: 5;" textAlignment="CENTER" textFill="WHITE" visible="false" StackPane.alignment="CENTER_LEFT">
+                     <StackPane.margin>
+                        <Insets left="10.0" />
+                     </StackPane.margin>
+                     <font>
+                        <Font name="Noto Mono" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets right="5.0" />
+               </VBox.margin>
+            </StackPane>
+            <GridPane hgap="5.0" prefHeight="267.0" prefWidth="250.0" vgap="10.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btn1" mnemonicParsing="false" onAction="#anadirDigito" prefHeight="60.0" prefWidth="60.0" text="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btn2" mnemonicParsing="false" onAction="#anadirDigito" prefHeight="60.0" prefWidth="60.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btn3" mnemonicParsing="false" onAction="#anadirDigito" prefHeight="60.0" prefWidth="60.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnDividir" mnemonicParsing="false" onAction="#anadirOperacion" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: blue;" text="/" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btn4" mnemonicParsing="false" onAction="#anadirDigito" prefHeight="60.0" prefWidth="60.0" text="4" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btn5" mnemonicParsing="false" onAction="#anadirDigito" prefHeight="60.0" prefWidth="60.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btn6" mnemonicParsing="false" onAction="#anadirDigito" prefHeight="60.0" prefWidth="60.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnMultiplicar" mnemonicParsing="false" onAction="#anadirOperacion" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: blue;" text="*" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btn7" mnemonicParsing="false" onAction="#anadirDigito" prefHeight="50.0" prefWidth="60.0" text="7" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btn8" mnemonicParsing="false" onAction="#anadirDigito" prefHeight="60.0" prefWidth="60.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btn9" mnemonicParsing="false" onAction="#anadirDigito" prefHeight="60.0" prefWidth="60.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnRestar" mnemonicParsing="false" onAction="#anadirOperacion" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: blue;" text="-" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnPunto" mnemonicParsing="false" onAction="#anadirComa" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 0 0 0 25;" text="," GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btn0" mnemonicParsing="false" onAction="#anadirDigito" prefHeight="60.0" prefWidth="60.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnIgual" mnemonicParsing="false" onAction="#calculaResultado" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: green;" text="=" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnSumar" mnemonicParsing="false" onAction="#anadirOperacion" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: blue; -fx-background-radius: 0 0 25 0;" text="+" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Liberation Sans" size="24.0" />
+                     </font></Button>
+                  <Button fx:id="btnCe" mnemonicParsing="false" onAction="#inicializa" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: red;" text="CE" textFill="WHITE" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="Liberation Sans" size="18.0" />
+                     </font></Button>
+                  <Button fx:id="btnCe1" mnemonicParsing="false" onAction="#borrarUltimo" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: red; -fx-background-radius: 30 0 0 30;" text="&lt;" textFill="WHITE" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Liberation Sans" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets bottom="7.0" left="7.0" top="7.0" />
+         </padding>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+   </padding>
+</AnchorPane>
