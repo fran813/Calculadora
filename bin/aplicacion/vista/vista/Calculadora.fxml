@@ -24,7 +24,7 @@
                <children>
                   <TextField fx:id="tfPantalla" alignment="CENTER_RIGHT" onAction="#calculaResultado" onKeyTyped="#teclaPulsada" prefHeight="38.0" prefWidth="193.0" style="-fx-background-radius: 15;" text="0">
                      <font>
-                        <Font size="26.0" />
+                        <Font name="Ani" size="26.0" />
                      </font>
                   </TextField>
                   <Label fx:id="lbOperador" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="17.0" style="-fx-background-color: gray; -fx-background-radius: 5;" textAlignment="CENTER" textFill="WHITE" visible="false" StackPane.alignment="CENTER_LEFT">
